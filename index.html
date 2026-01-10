@@ -15,9 +15,19 @@
                 <i data-lucide="compass" class="logo-icon"></i>
                 <span class="logo-text">Tech Compass</span>
             </a>
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <i data-lucide="menu" class="menu-icon"></i>
+                <i data-lucide="x" class="close-icon"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="#categories">Chart Your Course</a></li>
                 <li><a href="#about">About</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle dark mode">
+                        <i data-lucide="sun" class="sun-icon"></i>
+                        <i data-lucide="moon" class="moon-icon"></i>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -107,6 +117,7 @@
                     <p>BIOS, networking, building PCs, and more</p>
                 </a>
             </div>
+            <p class="no-results">No guides found. Try a different search term.</p>
         </section>
 
         <section class="about" id="about">
@@ -138,6 +149,10 @@
             <p>&copy; 2025 Tech Compass. Helping everyone navigate technology.</p>
         </div>
     </footer>
+
+    <button class="back-to-top" aria-label="Back to top">
+        <i data-lucide="chevron-up"></i>
+    </button>
 
     <script src="js/main.js"></script>
     <script>
