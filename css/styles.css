@@ -4,22 +4,25 @@
    ================================ */
 :root {
     /* Colors - Nautical Palette */
-    --color-navy: #f5f1e8;
+    --color-navy: #243a73 ;
     --color-navy-light: #FFFFFF;
     --color-navy-dark: #f1faee;
-    --color-brass: #f4d35e;
-    --color-brass-light: #fdd85d;
+    --color-brass: #ff6b4a ;
+    --color-brass-light: #c9a227;
     --color-cream: #1d3557;
+    --color-light: #f8fafc;
     --color-parchment: #ebe4d4;
-    --color-ink: #2c2c2c;
-    --color-text: #3d3d3d;
-    --color-text-light: #6b6b6b;
+    --color-ink: #0f172a;
+    --color-text: #0f172a;
+    --color-text-light: #0f172a;
     --color-sea-foam: #4a8f8f;
     --color-rope: #8b7355;
 
     /* Typography */
-    --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    --font-heading: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-size-base: 1rem;
     --font-size-lg: 1.125rem;
     --font-size-xl: 1.5rem;
@@ -109,7 +112,7 @@ body {
     font-size: var(--font-size-base);
     line-height: 1.6;
     color: var(--color-text);
-    background-color: var(--color-cream);
+    background-color: white;
 }
 
 a {
@@ -260,11 +263,34 @@ body.dark-mode .theme-toggle .moon-icon {
    Hero Section
    ================================ */
 .hero {
-    background: linear-gradient(180deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+    background: linear-gradient(180deg, var(--color-light) 0%, white 100%);
     padding: var(--spacing-2xl) var(--spacing-md);
     text-align: center;
     position: relative;
     overflow: hidden;
+}
+
+/* Spinner */
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30rem;
+    height: 30rem;
+    stroke-width: 0.04rem;
+    color: rgba(0, 0, 0, 0.05);
+    animation: spin 15s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 .hero-content {
@@ -277,7 +303,7 @@ body.dark-mode .theme-toggle .moon-icon {
 .hero h1 {
     font-family: var(--font-heading);
     font-size: var(--font-size-3xl);
-    color: var(--color-cream);
+    color: var(--color-navy);
     margin-bottom: var(--spacing-sm);
     line-height: 1.2;
     letter-spacing: 0.5px;
@@ -285,19 +311,24 @@ body.dark-mode .theme-toggle .moon-icon {
 
 .hero-subtitle {
     font-size: var(--font-size-lg);
-    color: rgba(245, 241, 230, 0.85);
+    font-weight: 500;
+    color: var(--color-navy);
+    opacity: 70%;
     margin-bottom: var(--spacing-lg);
 }
 
 /* Search */
 .search-container {
     display: flex;
-    gap: var(--spacing-xs);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
     max-width: 550px;
     margin: 0 auto var(--spacing-sm);
 }
 
 .search-input-wrapper {
+    width: 100%;
     flex: 1;
     position: relative;
     display: flex;
@@ -318,16 +349,15 @@ body.dark-mode .theme-toggle .moon-icon {
     padding: var(--spacing-sm) var(--spacing-md);
     padding-left: 48px;
     font-size: var(--font-size-base);
-    background-color: var(--color-cream);
-    border: 2px solid transparent;
-    border-radius: var(--border-radius);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5rem;
     transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .search-input:focus {
     outline: none;
-    border-color: var(--color-brass);
-    box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.2);
+    border-color: var(--color-navy);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
 .search-input::placeholder {
@@ -335,34 +365,41 @@ body.dark-mode .theme-toggle .moon-icon {
 }
 
 .search-button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-xs);
     padding: var(--spacing-sm) var(--spacing-md);
     background-color: var(--color-brass);
     color: var(--color-navy-dark);
-    font-size: var(--font-size-base);
+    line-height: 1;
+    font-size: var(--font-size-lg);
     font-weight: 600;
     border: none;
-    border-radius: var(--border-radius);
-    transition: background-color var(--transition-fast), transform var(--transition-fast);
+    border-radius: var(--border-radius-lg);
+    transition: all var(--transition-fast);
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .search-button:hover {
-    background-color: var(--color-brass-light);
-    transform: translateY(-1px);
+    background-color: rgb(0,0,0,0);
+    color: var(--color-brass);
+    box-shadow:0 0 0 2px var(--color-brass) inset;
 }
 
 .button-icon {
-    width: 18px;
-    height: 18px;
+    width: 1.1em;
+    height: 1.1em;
+    flex-shrink: 0;
 }
 
 .search-hint {
     font-size: 0.875rem;
-    color: rgba(245, 241, 230, 0.6);
     font-style: italic;
+    font-weight: 500;
+    color: var(--color-navy);
+    opacity: 70%;
 }
 
 /* ================================
