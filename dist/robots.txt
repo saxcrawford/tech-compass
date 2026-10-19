@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tech-compass-field-guide.ants-pinup-3l.chatgpt.site/sitemap.xml

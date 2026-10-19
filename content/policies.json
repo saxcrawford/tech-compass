@@ -1,0 +1,32 @@
+{
+  "privacy": {
+    "title": "Privacy notice",
+    "intro": "Tech Compass is an individual-operated website run by Saxon Crawford in Kentucky, United States. This notice describes the current site. It is a draft pending a review of hosting-provider retention and applicable privacy requirements.",
+    "sections": [
+      ["Reading and searching", "Tech Compass does not add advertising, analytics scripts, tracking pixels, contact forms, or browser storage. Guide search and suggestions run in your browser against a downloaded article index. Search terms can appear in the URL, browser history, and hosting request logs. Avoid entering passwords, account numbers, or other sensitive information into search."],
+      ["Hosting and access", "The site is delivered through OpenAI Sites. Hosting, network-security, and access providers may process connection information such as IP addresses, browser details, requested URLs, timestamps, and authentication data to deliver and protect the service. This private release requires access through the hosting platform. The application's lack of tracking does not mean the hosting platform processes no data."],
+      ["Email contact", "If you email Saxon Crawford, your email address, message, and any attachments are handled by the email services involved, including iCloud Mail for the contact address. Send only information needed to explain your question. Do not send passwords or unnecessary personal information. The site itself has no message database or email submission form."],
+      ["Cookies and links", "The Tech Compass application does not set cookies. The hosting platform may use its own access or security mechanisms. Links to documentation and other websites lead to services with their own privacy practices. Clicking an email link opens your email application; no message is sent until you send it."],
+      ["Questions and requests", "Contact Saxon Crawford using the email link below for privacy questions or requests concerning information you have sent directly. Applicable rights and the handling of a request depend on the information and relevant law. Provider-specific processing and retention periods are still being reviewed; this notice does not promise a retention period that has not been established."]
+    ]
+  },
+  "terms": {
+    "title": "Terms & website disclaimer",
+    "intro": "Tech Compass is operated by Saxon Crawford as an individual-operated website in Kentucky, United States. These draft terms describe the current educational site and need legal review before a broad public launch.",
+    "sections": [
+      ["Educational information", "Guides provide general explanations and troubleshooting suggestions. Hardware, software, and settings vary. A guide is not a diagnosis of your device or a guarantee of a particular result. Follow the manufacturer's current instructions for your model and version."],
+      ["Taking action safely", "Back up important files before changes that could affect data. Read warnings before resets, installations, or hardware work. Stop and seek qualified help if a device is damaged, overheating dangerously, or outside your ability to repair safely. For managed equipment, follow your organization's support procedures."],
+      ["Corrections and external references", "Information can become outdated or contain errors. Send corrections through the contact address below, including the guide URL and relevant device or software version. External links provide additional context; Tech Compass does not control those sites or their content."],
+      ["Current services", "This version offers free educational content. It has no paid subscriptions, advertisements, affiliate links, or purchase flow. There are no paid-service refund terms in this version."],
+      ["Review status", "Operator location is provided for transparency. This draft does not establish an exclusive court, mandatory arbitration, or a waiver of statutory rights. Any additional contractual provisions require review for the site's actual operation and audience."]
+    ]
+  },
+  "contact": {
+    "title": "Contact Tech Compass",
+    "intro": "Tech Compass is an individual-operated website by Saxon Crawford, based in Kentucky, United States.",
+    "sections": [
+      ["Corrections, accessibility, and privacy", "Email saxon.crawford@icloud.com. For a correction or accessibility issue, include the page URL, a short description, and your browser or device if relevant. Please leave out passwords, account credentials, and unnecessary personal information."],
+      ["Device support", "For account recovery, hardware repairs, or urgent device problems, use the official support channel for your device or service. Tech Compass provides general educational guides and does not offer a guaranteed response time or remote repair service."]
+    ]
+  }
+}
